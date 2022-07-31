@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container {
+    background-color: azure;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section1 {
+    display: flex;
+    gap: 10px;
+  }
+  .circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: black;
+    align-self: center;
+  }
+  /* .grid-card {
+    background-color: lightcoral;
+  } */
+  .grid {
+    width: 90vw;
+    display: grid;
+  
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  
+    grid-template-areas:
+      "a a b c"
+      "d e e c";
+  }
+  .grid-card {
+    border-radius: 10px;
+    padding: 30px;
+  
+    -webkit-box-shadow: 0px 0px 24px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 24px 0px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 24px 0px rgba(66, 68, 90, 1);
+  }
+  .gc1 {
+    grid-area: a;
+    background-color: purple;
+  }
+  .gc2 {
+    grid-area: b;
+    background-color: gray;
+  }
+  .gc3 {
+    grid-area: d;
+    background-color: white;
+  }
+  .gc4 {
+    grid-area: e;
+    background-color: rgba(0, 0, 0, 0.788);
+  }
+  .gc5 {
+    grid-area: c;
+    background-color: white;
+  }
+  .cl-w {
+    color: white;
+    font-weight: 400;
+  }
+  .info-p-op {
+    opacity: 0.7;
+  }
+  .section1,
+  .section2 {
+    padding-bottom: 20px;
+  }
+  .section3 > p {
+    padding-right: 105px;
+  }
+  
+  @media only screen and (max-width: 1400px) {
+    .container {
+      width: 100%;
+      height: 100%;
+      padding: 100px 0;
+    }
+    .grid {
+      height: 100%;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e";
+    }
+    .grid-card {
+      width: 100%;
+    }
+    .gc1 {
+      grid-area: a;
+    }
+    .gc2 {
+      grid-area: b;
+    }
+    .gc3 {
+      grid-area: c;
+    }
+    .gc4 {
+      grid-area: d;
+    }
+    .gc5 {
+      grid-area: e;
+    }
+    .section3 > p {
+      padding-right: 0;
+    }
+  }
+  
